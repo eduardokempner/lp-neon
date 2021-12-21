@@ -1,0 +1,224 @@
+footer {
+  padding-top: 4.9rem;
+  background-color: $brand-blue;
+  .top {
+    @include flex(row, center, space-between);
+    border-bottom: 2px solid rgba(73, 196, 253, 0.2);
+    padding-bottom: 4.9rem;
+    margin-bottom: 5.7rem;
+    .share {
+      display: flex;
+      align-items: center;
+      span {
+        font-size: 1.4rem;
+        line-height: 125%;
+        color: rgba(255, 255, 255, 0.7);
+      }
+      ul {
+        display: flex;
+        align-items: center;
+        margin-left: 3rem;
+        li {
+          &:not(:first-child) {
+            margin-left: 3rem;
+          }
+        }
+      }
+    }
+  }
+  .main {
+    @include flex(row, flex-start, space-between);
+    padding-bottom: 6.2rem;
+    margin-bottom: 3.9rem;
+    border-bottom: 2px solid rgba(73, 196, 253, 0.2);
+    nav {
+      max-width: 86rem;
+      width: 100%;
+      @include flex(row, flex-start, space-between);
+      flex-wrap: wrap;
+      .item {
+        strong {
+          display: inline-block;
+          font-family: "Poppins", sans-serif;
+          font-weight: 600;
+          font-size: 1.6rem;
+          line-height: 125%;
+          color: #ffffff;
+          margin-bottom: 2.5rem;
+        }
+        ul {
+          li {
+            &:not(:last-child) {
+              margin-bottom: 2.9rem;
+            }
+            a {
+              font-size: 1.4rem;
+              line-height: 1.7rem;
+              color: rgba(255, 255, 255, 0.7);
+            }
+          }
+        }
+      }
+    }
+    .btns {
+      max-width: 280px;
+      width: 100%;
+      button {
+        display: flex;
+        align-items: center;
+        max-width: 280px;
+        width: 100%;
+        height: 7.6rem;
+        padding-left: 2.5rem;
+        background-color: rgba(0, 164, 240, 0.2);
+        border-radius: 0.6rem;
+        &:not(:last-child) {
+          margin-bottom: 2.4rem;
+        }
+        .info {
+          margin-left: 2.4rem;
+          strong {
+            display: block;
+            text-align: left;
+            font-size: 14px;
+            line-height: 150%;
+            color: #ffffff;
+          }
+          span {
+            display: block;
+            text-align: left;
+            font-size: 14px;
+            line-height: 150%;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+  .msg {
+    border-bottom: 4px solid $brand-yellow;
+    padding-bottom: 3.8rem;
+    display: flex;
+    align-items: flex-start;
+    span {
+      font-size: 1.8rem;
+    }
+    p {
+      margin-left: 2.5rem;
+      width: 100%;
+      max-width: 66rem;
+      font-size: 1.4rem;
+      line-height: 150%;
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+  @include responsive(1050px) {
+    .main {
+      nav {
+        max-width: 76rem;
+      }
+    }
+  }
+  @include responsive(991px) {
+    .main {
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+      padding-bottom: 3.6rem;
+      nav {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        .item {
+          width: 33%;
+          margin-bottom: 5rem;
+        }
+      }
+      .btns {
+        position: absolute;
+        bottom: 10rem;
+        right: 0;
+      }
+    }
+    .msg {
+      flex-direction: column;
+      align-items: center;
+      p {
+        text-align: center;
+        margin-left: 0;
+      }
+      span {
+        margin-bottom: 1.2rem;
+        display: inline-block;
+      }
+    }
+  }
+  @include responsive(600px) {
+    .main {
+      margin-bottom: 3rem;
+      .btns {
+        max-width: 25rem;
+        button {
+          img {
+            display: none;
+          }
+          .info {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+  @include responsive(480px) {
+    padding-top: 4.6rem;
+    .top {
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 4.3rem;
+      margin-bottom: 5.3rem;
+      .logo-footer {
+        max-width: 10.8rem;
+        margin-bottom: 3.2rem;
+      }
+      .share {
+        flex-direction: column;
+        span {
+          margin-bottom: 2rem;
+        }
+        ul {
+          margin-left: 0;
+          li {
+            &:not(:first-child) {
+              margin-left: 3.7rem;
+            }
+          }
+        }
+      }
+    }
+    .main {
+      nav {
+        .item {
+          width: 50%;
+        }
+      }
+      .btns {
+        position: initial;
+        max-width: 100%;
+        button {
+          max-width: 100%;
+          padding-left: 0;
+          justify-content: center;
+          .info {
+            span {
+              text-align: center;
+            }
+            strong {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
